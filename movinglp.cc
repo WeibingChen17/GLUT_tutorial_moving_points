@@ -86,15 +86,16 @@ void drawPoints(){
     glEnd();
     glFlush();
     glutPostRedisplay();
+    glutSwapBuffers();
 }
 
 
 int main(int argc, char **argv){
     initialize();
     glutInit(&argc, argv);
-    glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB | GLUT_DEPTH);
-    glShadeModel( GL_FLAT );   
-    glEnable( GL_DEPTH_TEST ); // Depth testing must be turned on
+    glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
+    glShadeModel(GL_SMOOTH);   
+    glEnable(GL_DEPTH_TEST); // Depth testing must be turned on
     glutInitWindowSize(500, 500);
     glutInitWindowPosition(100, 100);
     glutCreateWindow("OPENGL - MOVING LINED POINTS");
