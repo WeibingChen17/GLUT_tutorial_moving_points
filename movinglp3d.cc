@@ -29,7 +29,7 @@ void initialize(){
     std::uniform_real_distribution<float> col(min_color, max_color);
     std::uniform_real_distribution<float> pos(-range, range);
     std::normal_distribution<float> vel(average_velocity, sigma_velocity);
-    gen.seed();
+    //gen.seed();
     for (size_t i = 0; i < n_points; ++i){
         x[i] = pos(gen);
         y[i] = pos(gen);
