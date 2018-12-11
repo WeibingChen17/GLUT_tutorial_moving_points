@@ -1,4 +1,9 @@
-CC=g++
+OS := $(shell uname -s)
+ifeq ($(OS), Linux)
+    CC=g++
+endif
+ifeq ($(OS), Darwin)
+    CC=clang++
 LIBGLUT=-lglut
 LIBGL=-lGL
 
